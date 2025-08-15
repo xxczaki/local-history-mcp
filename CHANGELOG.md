@@ -1,5 +1,11 @@
 # local-history-mcp
 
+## 1.1.2
+
+### Patch Changes
+
+- bb99763: - change description
+
 ## 1.1.1
 
 ### Patch Changes
