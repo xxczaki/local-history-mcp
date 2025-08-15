@@ -21,23 +21,19 @@ Install using your preferred package manager:
 ```bash
 # npm
 npm install -g local-history-mcp
-# or run without installing
-npx local-history-mcp
+npx local-history-mcp # or run without installing
 
 # pnpm  
 pnpm add -g local-history-mcp
-# or run without installing
-pnpm dlx local-history-mcp
+pnpm dlx local-history-mcp # or run without installing
 
 # yarn
-yarn global add local-history-mcp
-# or run without installing  
-yarn dlx local-history-mcp
+yarn global add local-history-mcp 
+yarn dlx local-history-mcp # or run without installing 
 
 # bun
 bun add -g local-history-mcp
-# or run without installing
-bunx local-history-mcp
+bunx local-history-mcp # or run without installing
 ```
 
 ### Option 2: From Source
@@ -81,7 +77,7 @@ For **Claude Desktop**, see the [official MCP documentation](https://docs.anthro
 
 ### VS Code
 
-See the [official documentation](https://code.visualstudio.com/docs/copilot/chat/mcp-servers).
+See the [official documentation](https://code.visualstudio.com/docs/copilot/chat/mcp-servers#_add-an-mcp-server).
 
 ## Development
 
@@ -98,52 +94,6 @@ pnpm lint
 
 # Launch MCP Inspector
 pnpm inspector
-```
-
-## Technical Details
-
-### Storage Locations
-
-| OS | Cursor | VS Code |
-|---|--------|---------|
-| **macOS** | `~/Library/Application Support/Cursor/User/History` | `~/Library/Application Support/Code/User/History` |
-| **Windows** | `%APPDATA%\Cursor\User\History` | `%APPDATA%\Code\User\History` |
-| **Linux** | `~/.config/Cursor/User/History` | `~/.config/Code/User/History` |
-
-### Release Process
-
-Releases are managed using [Changesets](https://github.com/changesets/changesets) for better changelog management:
-
-#### 1. Create a changeset
-```bash
-pnpm changeset
-```
-This will prompt you to:
-- Select the type of change (patch, minor, major)
-- Describe what changed
-
-#### 2. Commit the changeset
-```bash
-git add .changeset/
-git commit -m "feat: add new feature"
-git push
-```
-
-#### 3. Automated release
-When you push to `main`, GitHub Actions will:
-- 🤖 Create a release PR if there are pending changesets
-- 📝 Generate changelogs from your changesets
-- 🧪 Run tests and linting
-- 🚀 Publish to npm with provenance when the PR is merged
-
-#### Manual release (if needed)
-
-```bash
-# Version packages and generate changelog
-pnpm version-packages
-
-# Publish to npm
-pnpm release
 ```
 
 ## AI disclosure
