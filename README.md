@@ -20,20 +20,16 @@ Install using your preferred package manager:
 
 ```bash
 # npm
-npm install -g local-history-mcp
-npx local-history-mcp # or run without installing
+npx local-history-mcp
 
-# pnpm  
-pnpm add -g local-history-mcp
-pnpm dlx local-history-mcp # or run without installing
+# pnpm
+pnpm dlx local-history-mcp
 
 # yarn
-yarn global add local-history-mcp 
-yarn dlx local-history-mcp # or run without installing 
+yarn global add local-history-mcp
 
 # bun
-bun add -g local-history-mcp
-bunx local-history-mcp # or run without installing
+bunx local-history-mcp
 ```
 
 ### Option 2: From Source
@@ -87,7 +83,6 @@ pnpm dev
 
 # Run tests
 pnpm test
-pnpm test:watch
 
 # Linting and formatting
 pnpm lint

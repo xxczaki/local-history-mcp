@@ -15,7 +15,6 @@
     "clean": "rm -rf dist",
     "lint": "biome check --write src/ test/",
     "test": "node --test test/**/*.test.js",
-    "test:watch": "node --test --watch test/**/*.test.js",
     "inspector": "pnpm dlx @modelcontextprotocol/inspector node dist/index.cjs",
     "prepublishOnly": "pnpm clean && pnpm build && pnpm test",
     "changeset": "changeset",
