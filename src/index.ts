@@ -83,7 +83,8 @@ class LocalHistoryMCPServer {
 							properties: {
 								filePath: {
 									type: 'string',
-									description: 'The path to the file. Please provide an absolute path (e.g., "/Users/user/project/biome.json") for reliable matching.',
+									description:
+										'The path to the file. Please provide an absolute path (e.g., "/Users/user/project/biome.json") for reliable matching.',
 								},
 								entryIndex: {
 									type: 'number',
@@ -104,7 +105,8 @@ class LocalHistoryMCPServer {
 							properties: {
 								filePath: {
 									type: 'string',
-									description: 'The absolute path to the file to restore (e.g., "/Users/user/project/biome.json").',
+									description:
+										'The absolute path to the file to restore (e.g., "/Users/user/project/biome.json").',
 								},
 								entryIndex: {
 									type: 'number',
@@ -165,7 +167,7 @@ class LocalHistoryMCPServer {
 					case 'list_history_files':
 						return await this.listHistoryFiles();
 
-					case 'get_file_history':
+					case 'get_file_history': {
 						if (!args || typeof args !== 'object' || !('filePath' in args)) {
 							throw new McpError(
 								ErrorCode.InvalidParams,
@@ -180,8 +182,9 @@ class LocalHistoryMCPServer {
 							);
 						}
 						return await this.getFileHistory(filePathHistory);
+					}
 
-					case 'get_history_entry':
+					case 'get_history_entry': {
 						if (
 							!args ||
 							typeof args !== 'object' ||
@@ -204,8 +207,9 @@ class LocalHistoryMCPServer {
 							filePathEntry,
 							args.entryIndex as number,
 						);
+					}
 
-					case 'restore_from_history':
+					case 'restore_from_history': {
 						if (
 							!args ||
 							typeof args !== 'object' ||
@@ -230,6 +234,7 @@ class LocalHistoryMCPServer {
 							((args as Record<string, unknown>).createBackup as boolean) ??
 								true,
 						);
+					}
 
 					case 'get_history_stats':
 						return await this.getHistoryStats();
@@ -554,7 +559,7 @@ const isMainModule = typeof require !== 'undefined' && require.main === module;
 
 if (isMainModule) {
 	const server = new LocalHistoryMCPServer();
-	
+
 	server.run().catch((error) => {
 		logger.error({ error }, 'Failed to start server');
 		process.exit(1);
@@ -562,3 +567,4 @@ if (isMainModule) {
 }
 
 export { LocalHistoryMCPServer };
+export { pathToUri, uriToPath, VSCodeHistoryParser } from './history-parser.js';
