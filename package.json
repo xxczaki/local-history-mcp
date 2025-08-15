@@ -1,7 +1,7 @@
 {
   "name": "local-history-mcp",
   "version": "1.1.1",
-  "description": "MCP server to access VS Code/Cursor Local History",
+  "description": "MCP server for accessing VS Code/Cursor Local History",
   "main": "dist/index.cjs",
   "bin": {
     "local-history-mcp": "dist/index.cjs"
