@@ -1,5 +1,3 @@
-#!/usr/bin/env node
-
 import fs from 'node:fs';
 import path from 'node:path';
 import { Server } from '@modelcontextprotocol/sdk/server/index.js';
@@ -552,8 +550,11 @@ class LocalHistoryMCPServer {
 }
 
 // Start the server
-if (import.meta.url === `file://${process.argv[1]}`) {
+const isMainModule = typeof require !== 'undefined' && require.main === module;
+
+if (isMainModule) {
 	const server = new LocalHistoryMCPServer();
+	
 	server.run().catch((error) => {
 		logger.error({ error }, 'Failed to start server');
 		process.exit(1);

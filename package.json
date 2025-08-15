@@ -2,20 +2,21 @@
   "name": "local-history-mcp",
   "version": "1.0.1",
   "description": "MCP server to access VS Code/Cursor Local History",
-  "main": "dist/index.js",
+  "main": "dist/index.cjs",
   "bin": {
-    "local-history-mcp": "dist/index.js"
+    "local-history-mcp": "dist/index.cjs"
   },
   "type": "module",
   "scripts": {
-    "build": "tsc",
-    "start": "node dist/index.js",
+    "build": "node esbuild.mjs && chmod +x dist/index.cjs",
+    "build:tsc": "tsc",
+    "start": "node dist/index.cjs",
     "dev": "tsx src/index.ts",
     "clean": "rm -rf dist",
     "lint": "biome check --write src/ test/",
     "test": "node --test test/**/*.test.js",
     "test:watch": "node --test --watch test/**/*.test.js",
-    "inspector": "pnpm dlx @modelcontextprotocol/inspector node dist/index.js",
+    "inspector": "pnpm dlx @modelcontextprotocol/inspector node dist/index.cjs",
     "prepublishOnly": "pnpm clean && pnpm build && pnpm test",
     "changeset": "changeset",
     "version-packages": "changeset version",
@@ -52,6 +53,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.2.0",
     "@changesets/cli": "^2.29.5",
+    "esbuild": "^0.25.9",
     "pino-pretty": "^13.1.1",
     "tsx": "^4.20.4"
   }
