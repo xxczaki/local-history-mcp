@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "local-history": {
+      "command": "node",
+      "args": ["dist/index.js"],
+      "env": {
+        "LOG_LEVEL": "info"
+      },
+      "description": "Access Cursor Local History for data recovery and context awareness"
+    }
+  }
+}

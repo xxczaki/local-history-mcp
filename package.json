@@ -1,0 +1,58 @@
+{
+  "name": "local-history-mcp",
+  "version": "1.0.0",
+  "description": "MCP server to access VS Code/Cursor Local History",
+  "main": "dist/index.js",
+  "bin": {
+    "local-history-mcp": "dist/index.js"
+  },
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "tsx src/index.ts",
+    "clean": "rm -rf dist",
+    "lint": "biome check --write src/ test/",
+    "test": "node --test test/**/*.test.js",
+    "test:watch": "node --test --watch test/**/*.test.js",
+    "inspector": "pnpm dlx @modelcontextprotocol/inspector node dist/index.js",
+    "prepublishOnly": "pnpm clean && pnpm build && pnpm test",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "pnpm build && changeset publish"
+  },
+  "keywords": [
+    "mcp",
+    "vscode",
+    "cursor",
+    "local-history",
+    "data-recovery",
+    "ai-assistant"
+  ],
+  "author": "Antoni Kępiński",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/xxczaki/local-history-mcp.git"
+  },
+  "homepage": "https://github.com/xxczaki/local-history-mcp#readme",
+  "bugs": {
+    "url": "https://github.com/xxczaki/local-history-mcp/issues"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "packageManager": "pnpm@10.14.0",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.17.3",
+    "@types/node": "^24.3.0",
+    "pino": "^9.9.0",
+    "typescript": "^5.9.2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "^2.2.0",
+    "@changesets/cli": "^2.29.5",
+    "pino-pretty": "^13.1.1",
+    "tsx": "^4.20.4"
+  }
+}

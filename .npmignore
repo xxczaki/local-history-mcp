@@ -1,0 +1,30 @@
+# Source files (only ship built dist/)
+src/
+tsconfig.json
+biome.json
+
+# Development files
+test/
+*.test.js
+.cursor/
+.nvmrc
+
+# Build artifacts that aren't needed
+*.map
+*.tsbuildinfo
+
+# Development dependencies
+node_modules/
+pnpm-lock.yaml
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
