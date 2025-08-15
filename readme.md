@@ -4,6 +4,8 @@
 
 [![CI](https://github.com/xxczaki/local-history-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/xxczaki/local-history-mcp/actions/workflows/ci.yml) [![Release](https://github.com/xxczaki/local-history-mcp/actions/workflows/publish.yml/badge.svg)](https://github.com/xxczaki/local-history-mcp/actions/workflows/publish.yml) [![MCP](https://img.shields.io/badge/MCP-Compatible-blue)](https://modelcontextprotocol.io)
 
+<img width="746" height="1456" alt="Demo" src="https://github.com/user-attachments/assets/30dd1ac2-b1de-485f-9735-4813076587e5" />
+
 ## Overview
 
 This MCP server bridges the gap between AI assistants and editor Local History, enabling data recovery and enhanced context awareness. Unlike undo/redo, Local History captures file snapshots at save points, preserving work that would otherwise be lost.
