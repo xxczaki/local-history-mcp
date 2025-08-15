@@ -1,5 +1,11 @@
 # local-history-mcp
 
+## 1.1.1
+
+### Patch Changes
+
+- 0011700: - add demo screenshot to readme
+
 ## 1.1.0
 
 ### Minor Changes
