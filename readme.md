@@ -1,10 +1,10 @@
+<img width="300" alt="Demo" align="right" src="https://github.com/user-attachments/assets/30dd1ac2-b1de-485f-9735-4813076587e5" />
+
 # Local History MCP Server
 
 > Access Cursor/VS Code Local History through the Model Context Protocol for AI-powered data recovery
 
 [![CI](https://github.com/xxczaki/local-history-mcp/actions/workflows/ci.yml/badge.svg)](https://github.com/xxczaki/local-history-mcp/actions/workflows/ci.yml) [![Release](https://github.com/xxczaki/local-history-mcp/actions/workflows/publish.yml/badge.svg)](https://github.com/xxczaki/local-history-mcp/actions/workflows/publish.yml) [![MCP](https://img.shields.io/badge/MCP-Compatible-blue)](https://modelcontextprotocol.io)
-
-<img width="746" height="1456" alt="Demo" src="https://github.com/user-attachments/assets/30dd1ac2-b1de-485f-9735-4813076587e5" />
 
 ## Overview
 
