@@ -7,11 +7,11 @@ import {
 	pathToUri,
 	uriToPath,
 	VSCodeHistoryParser,
-} from '../dist/history-parser.js';
+} from '../src/history-parser.ts';
 
 describe('VSCodeHistoryParser', () => {
-	let parser;
-	let tempDir;
+	let parser: VSCodeHistoryParser;
+	let tempDir: string;
 
 	beforeEach(() => {
 		parser = new VSCodeHistoryParser();
@@ -26,17 +26,17 @@ describe('VSCodeHistoryParser', () => {
 
 	describe('URI conversion utilities', () => {
 		it('should convert file URI to path', () => {
-			const uri = 'file:///Users/test/file.txt';
-			const result = uriToPath(uri);
+			const uri: string = 'file:///Users/test/file.txt';
+			const result: string = uriToPath(uri);
 
 			assert.strictEqual(result, '/Users/test/file.txt');
 		});
 
 		it('should handle non-URI paths', () => {
-			const path = '/Users/test/file.txt';
-			const result = uriToPath(path);
+			const filePath: string = '/Users/test/file.txt';
+			const result: string = uriToPath(filePath);
 
-			assert.strictEqual(result, path);
+			assert.strictEqual(result, filePath);
 		});
 
 		it('should convert path to URI', () => {

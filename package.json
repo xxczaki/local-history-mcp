@@ -14,7 +14,7 @@
     "dev": "tsx src/index.ts",
     "clean": "rm -rf dist",
     "lint": "biome check --write src/ test/",
-    "test": "node --test test/**/*.test.js",
+    "test": "node --experimental-strip-types --test test/**/*.test.ts",
     "inspector": "pnpm dlx @modelcontextprotocol/inspector node dist/index.cjs",
     "prepublishOnly": "pnpm clean && pnpm build && pnpm test",
     "changeset": "changeset",

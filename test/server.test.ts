@@ -1,9 +1,9 @@
 import assert from 'node:assert';
 import { beforeEach, describe, it } from 'node:test';
-import { LocalHistoryMCPServer } from '../dist/index.js';
+import { LocalHistoryMCPServer } from '../src/index.ts';
 
 describe('LocalHistoryMCPServer', () => {
-	let server;
+	let server: LocalHistoryMCPServer;
 
 	beforeEach(() => {
 		server = new LocalHistoryMCPServer();

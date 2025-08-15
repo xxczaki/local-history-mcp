@@ -8,8 +8,8 @@ import {
 	ListToolsRequestSchema,
 	McpError,
 } from '@modelcontextprotocol/sdk/types.js';
-import { uriToPath, VSCodeHistoryParser } from './history-parser.js';
-import logger from './logger.js';
+import { uriToPath, VSCodeHistoryParser } from './history-parser.ts';
+import logger from './logger.ts';
 
 class LocalHistoryMCPServer {
 	private server: Server;
@@ -567,4 +567,4 @@ if (isMainModule) {
 }
 
 export { LocalHistoryMCPServer };
-export { pathToUri, uriToPath, VSCodeHistoryParser } from './history-parser.js';
+export { pathToUri, uriToPath, VSCodeHistoryParser } from './history-parser.ts';

@@ -1,7 +1,7 @@
 import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
-import logger from './logger.js';
+import logger from './logger.ts';
 
 export interface HistoryEntry {
 	timestamp: number;
