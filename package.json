@@ -40,7 +40,7 @@
     "url": "https://github.com/xxczaki/local-history-mcp/issues"
   },
   "engines": {
-    "node": ">=22.13.0"
+    "node": ">=22.19.0"
   },
   "packageManager": "pnpm@10.15.1",
   "dependencies": {
