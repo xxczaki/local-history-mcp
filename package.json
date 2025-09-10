@@ -46,7 +46,7 @@
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.17.5",
     "@types/node": "^24.3.1",
-    "pino": "^9.9.4",
+    "pino": "^9.9.5",
     "typescript": "^5.9.2"
   },
   "devDependencies": {
