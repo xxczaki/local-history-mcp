@@ -44,7 +44,7 @@
   },
   "packageManager": "pnpm@10.17.1",
   "dependencies": {
-    "@modelcontextprotocol/sdk": "^1.18.1",
+    "@modelcontextprotocol/sdk": "^1.18.2",
     "@types/node": "^24.5.2",
     "pino": "^9.11.0",
     "typescript": "^5.9.2"
