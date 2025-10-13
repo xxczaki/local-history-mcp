@@ -50,7 +50,7 @@
     "typescript": "^5.9.3"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.2.5",
+    "@biomejs/biome": "^2.2.6",
     "@changesets/cli": "^2.29.7",
     "esbuild": "^0.25.10",
     "pino-pretty": "^13.1.2",
