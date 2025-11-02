@@ -52,7 +52,7 @@
   "devDependencies": {
     "@biomejs/biome": "^2.3.2",
     "@changesets/cli": "^2.29.7",
-    "esbuild": "^0.25.11",
+    "esbuild": "^0.25.12",
     "pino-pretty": "^13.1.2",
     "tsx": "^4.20.6"
   }
