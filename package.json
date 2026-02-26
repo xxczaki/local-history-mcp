@@ -42,7 +42,7 @@
   "engines": {
     "node": ">=22.22.0"
   },
-  "packageManager": "pnpm@10.30.2",
+  "packageManager": "pnpm@10.30.3",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.27.1",
     "@types/node": "^24.9.1",
