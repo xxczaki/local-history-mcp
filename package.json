@@ -40,12 +40,12 @@
     "url": "https://github.com/xxczaki/local-history-mcp/issues"
   },
   "engines": {
-    "node": ">=22.22.0"
+    "node": ">=24.14.0"
   },
   "packageManager": "pnpm@10.30.3",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.27.1",
-    "@types/node": "^24.9.1",
+    "@types/node": "^24.11.0",
     "pino": "^9.14.0",
     "typescript": "^5.9.3"
   },
