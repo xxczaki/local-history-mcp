@@ -34,7 +34,7 @@ importers:
         specifier: ^13.1.3
         version: 13.1.3
       tsx:
-        specifier: ^4.23.9
+        specifier: ^4.23.10
         version: 4.23.10
 
 packages:
