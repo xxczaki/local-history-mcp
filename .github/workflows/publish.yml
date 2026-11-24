@@ -7,6 +7,8 @@ on:
 
 concurrency: ${{ github.workflow }}-${{ github.ref }}
 
+permissions: {}
+
 jobs:
   release:
     name: Release
@@ -14,40 +16,44 @@ jobs:
     permissions:
       contents: write
       pull-requests: write
-      id-token: write  # Required for npm provenance
-    
+      id-token: write # npm trusted publishing (OIDC) and provenance
+
     steps:
+      # Credentials stay persisted: changesets/action pushes the release branch.
       - name: Checkout Repo
         uses: actions/checkout@v5
-        
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version-file: '.nvmrc'
           registry-url: 'https://registry.npmjs.org'
-          
+
+      # Trusted publishing needs npm 11.5.1+; Node 22 ships with npm 10.
+      - name: Update npm
+        run: npm install -g npm@^11.5.1
+
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
-          
+
       - name: Install dependencies
-        run: pnpm install --frozen-lockfile
-        
+        run: pnpm install --frozen-lockfile --ignore-scripts
+
       - name: Run linter
         run: pnpm lint
 
       - name: Build project
         run: pnpm build
-        
+
       - name: Run tests
         run: pnpm test
-        
+
       - name: Create Release Pull Request or Publish to npm
         id: changesets
-        uses: changesets/action@v1
+        uses: changesets/action@v2.1.2
         with:
-          publish: pnpm release
-          version: pnpm version-packages
+          publish-script: pnpm release
+          version-script: pnpm version-packages
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
           NPM_CONFIG_PROVENANCE: true
