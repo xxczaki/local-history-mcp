@@ -1,3 +1,5 @@
+[![MSeeP.ai Security Assessment Badge](https://mseep.net/pr/xxczaki-local-history-mcp-badge.png)](https://mseep.ai/app/xxczaki-local-history-mcp)
+
 <img width="300" alt="Demo" align="right" src="https://github.com/user-attachments/assets/30dd1ac2-b1de-485f-9735-4813076587e5" />
 
 # Local History MCP Server
